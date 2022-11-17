@@ -1,0 +1,13 @@
+alias "enva"="source *env/bin/activate";
+alias "pmr"="python3 manage.py runserver";
+alias "pmc"="python3 manage.py collectstatic";
+alias "pmm"="python3 manage.py makemigrations";
+alias "pmt"="python3 manage.py migrate";
+alias "pms"="python3 manage.py createsuperuser";
+alias "pm"="python3 manage.py";
+alias "hrep"="history | grep";
+alias "mkrq"="pip freeze > req*.txt; pip freeze";
+alias "installrq"="pip install -r";
+alias "clipit"="xclip -sel clip";
+alias "getpin"="xclip -sel clip < /home/bishwasbhandari/Documents/gitpin.txt";
+
