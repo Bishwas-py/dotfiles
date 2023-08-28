@@ -1,3 +1,7 @@
+actv() {
+    local envName="$1"
+    source ~/.virtualenvs/"$envName"/bin/activate
+}
 alias "enva"="source *env/bin/activate";
 alias "pmr"="python3 manage.py runserver";
 alias "pmc"="python3 manage.py collectstatic";
