@@ -11,7 +11,10 @@ alias "pms"="python3 manage.py createsuperuser";
 alias "pm"="python3 manage.py";
 alias "hrep"="history | grep";
 alias "mkrq"="pip freeze > req*.txt; pip freeze";
-alias "installrq"="pip install -r";
+function installrq() {
+    local requirements_path=${1:-"requirements.txt"}
+    pip install -r $requirements_path
+}
 alias "clipit"="xclip -sel clip";
 alias "getpin"="xclip -sel clip < /home/bishwasbhandari/Documents/gitpin.txt";
 
