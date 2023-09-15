@@ -1,3 +1,26 @@
+
+use_env() { 
+    local env_file=""
+    
+    # if the first argument ends with .<something>, use it as the environment file
+    if [[ $1 == *.* ]]; then
+        env_file=$1
+        shift
+    else
+        env_file=".env"  # default file
+    fi
+    
+    if [[ -f $env_file ]]; then
+        set -a
+        source $env_file
+        set +a
+        "$@"
+    else
+        echo "Environment file $env_file doesn't exist."
+        return 1
+    fi
+}
+
 actv() {
     local envName="$1"
     source ~/.virtualenvs/"$envName"/bin/activate
