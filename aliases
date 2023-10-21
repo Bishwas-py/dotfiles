@@ -33,7 +33,7 @@ alias "pmt"="python3 manage.py migrate";
 alias "pms"="python3 manage.py createsuperuser";
 alias "pm"="python3 manage.py";
 alias "hrep"="history | grep";
-alias "mkrq"="pip freeze > req*.txt; pip freeze";
+alias "mkrq"="pip freeze > requirements.txt; pip freeze";
 function installrq() {
     local requirements_path=${1:-"requirements.txt"}
     pip install -r $requirements_path
